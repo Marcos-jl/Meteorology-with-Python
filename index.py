@@ -14,7 +14,6 @@ from time import sleep
 class main:
     def __init__(self, city):
         self.browser = webdriver.Chrome(executable_path=r'/home/marcos/Documentos/chromedriver_linux64/chromedriver') #Conecta o chrome com python
-        self.browser.maximize_window() #Maximizar a tela do Chrome
         self.browser.get('https://www.cptec.inpe.br/') #Site que o Chrome vai abrir
         sleep(3.5)
         self.search = self.browser.find_element_by_id('search').send_keys(city) #Digita a cidade na barra de peesquisa
